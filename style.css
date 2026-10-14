@@ -1,14 +1,4 @@
-
-/* =====================================
-   FONTS
-===================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Jura:wght@300..700&display=swap');
-
-
-/* =====================================
-   GENERAL
-===================================== */
 
 * {
     box-sizing: border-box;
@@ -24,11 +14,6 @@ body {
     background-color: #080e20;
     font-family: "Jura", sans-serif;
 }
-
-
-/* =====================================
-   HEADER - ALL SECTIONS
-===================================== */
 
 .header {
     display: flex;
@@ -49,8 +34,6 @@ body {
     gap: 15px;
 }
 
-/* HEADER TITLES */
-
 .header-planet,
 .header-facts,
 .header-gallery {
@@ -62,18 +45,11 @@ body {
     margin: 0;
 }
 
-/* NEPTUNE ICON */
-
 .neptune-icon {
     width: 30px;
     height: 30px;
     object-fit: contain;
 }
-
-
-/* =====================================
-   NAVIGATION
-===================================== */
 
 nav {
     display: flex;
@@ -94,11 +70,6 @@ nav {
     margin: 10px;
 }
 
-
-/* =====================================
-   SHARED HERO STYLING
-===================================== */
-
 .Hero {
     position: relative;
     display: flex;
@@ -115,19 +86,9 @@ nav {
     isolation: isolate;
 }
 
-
-/* =====================================
-   FRONT PAGE BACKGROUND
-===================================== */
-
 .home-hero {
     background-image: url("Images/neptune background.jpg");
 }
-
-
-/* =====================================
-   FRONT PAGE TEXT
-===================================== */
 
 .hero-content {
     position: relative;
@@ -160,11 +121,6 @@ nav {
     margin: 0;
 }
 
-
-/* =====================================
-   FACTS BACKGROUND
-===================================== */
-
 .facts-hero {
     background-image: url("Images/neptune background facts.jpg");
 
@@ -175,11 +131,6 @@ nav {
 
     padding: 60px 10%;
 }
-
-
-/* =====================================
-   FACTS TEXT
-===================================== */
 
 .facts-content {
     position: relative;
@@ -201,8 +152,6 @@ nav {
     margin: 0 0 30px 0;
 }
 
-/* INDIVIDUAL FACTS */
-
 .fact {
     margin-bottom: 12px;
 }
@@ -221,11 +170,6 @@ nav {
     letter-spacing: 1px;
     margin: 0;
 }
-
-
-/* =====================================
-   GALLERY BACKGROUND
-===================================== */
 
 .gallery-hero {
     background-color: #080e20;
@@ -285,8 +229,6 @@ nav {
 }
 
 @media (max-width: 768px) {
-
-    /* HEADER */
 
     .header {
         flex-wrap: wrap;
@@ -358,11 +300,5 @@ nav {
 
     .gallery-image-container {
         max-width: 100%;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
     }
 }
