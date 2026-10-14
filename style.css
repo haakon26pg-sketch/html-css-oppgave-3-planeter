@@ -1,4 +1,14 @@
+
+/* =====================================
+   FONTS
+===================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Jura:wght@300..700&display=swap');
+
+
+/* =====================================
+   GENERAL
+===================================== */
 
 * {
     box-sizing: border-box;
@@ -12,7 +22,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #080e20;
+    font-family: "Jura", sans-serif;
 }
+
+
+/* =====================================
+   HEADER - ALL SECTIONS
+===================================== */
 
 .header {
     display: flex;
@@ -21,6 +37,9 @@ body {
 
     background-color: rgba(229, 229, 234, 1);
     padding: 10px 30px;
+    min-height: 100px;
+
+    position: static;
 }
 
 .header-brand {
@@ -30,20 +49,31 @@ body {
     gap: 15px;
 }
 
+/* HEADER TITLES */
+
 .header-planet,
-.header-facts {
+.header-facts,
+.header-gallery {
     font-family: "Jomhuria", sans-serif;
     font-size: 64px;
     font-weight: 400;
+
     color: rgba(101, 117, 174, 1);
     margin: 0;
 }
+
+/* NEPTUNE ICON */
 
 .neptune-icon {
     width: 30px;
     height: 30px;
     object-fit: contain;
 }
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
 
 nav {
     display: flex;
@@ -61,9 +91,13 @@ nav {
 
     color: black;
     text-decoration: none;
-
     margin: 10px;
 }
+
+
+/* =====================================
+   SHARED HERO STYLING
+===================================== */
 
 .Hero {
     position: relative;
@@ -81,9 +115,19 @@ nav {
     isolation: isolate;
 }
 
+
+/* =====================================
+   FRONT PAGE BACKGROUND
+===================================== */
+
 .home-hero {
     background-image: url("Images/neptune background.jpg");
 }
+
+
+/* =====================================
+   FRONT PAGE TEXT
+===================================== */
 
 .hero-content {
     position: relative;
@@ -103,7 +147,6 @@ nav {
     line-height: 1.2;
 
     color: white;
-
     margin: 0 0 20px 0;
 }
 
@@ -117,6 +160,11 @@ nav {
     margin: 0;
 }
 
+
+/* =====================================
+   FACTS BACKGROUND
+===================================== */
+
 .facts-hero {
     background-image: url("Images/neptune background facts.jpg");
 
@@ -127,6 +175,11 @@ nav {
 
     padding: 60px 10%;
 }
+
+
+/* =====================================
+   FACTS TEXT
+===================================== */
 
 .facts-content {
     position: relative;
@@ -148,6 +201,8 @@ nav {
     margin: 0 0 30px 0;
 }
 
+/* INDIVIDUAL FACTS */
+
 .fact {
     margin-bottom: 12px;
 }
@@ -156,7 +211,6 @@ nav {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 1px;
-
     margin: 0;
 }
 
@@ -165,11 +219,74 @@ nav {
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 1px;
-
     margin: 0;
 }
 
+
+/* =====================================
+   GALLERY BACKGROUND
+===================================== */
+
+.gallery-hero {
+    background-color: #080e20;
+    background-image: url("Images/neptune background gallery.jpg");
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    min-height: 585px;
+    padding: 35px 5% 60px;
+}
+
+.gallery-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 950px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+}
+
+.gallery-title {
+    font-family: "Jura", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+
+    color: white;
+    text-align: center;
+
+    margin: 0 0 25px 0;
+}
+
+.gallery-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 735px;
+}
+
+.gallery-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 12px;
+}
+
 @media (max-width: 768px) {
+
+    /* HEADER */
 
     .header {
         flex-wrap: wrap;
@@ -178,7 +295,8 @@ nav {
     }
 
     .header-planet,
-    .header-facts {
+    .header-facts,
+    .header-gallery {
         font-size: 48px;
     }
 
@@ -194,10 +312,13 @@ nav {
         margin: 5px;
     }
 
+
     .Hero {
         min-height: 550px;
         padding: 60px 6%;
     }
+
+    /*  */
 
     .hero-title {
         font-size: 30px;
@@ -206,6 +327,8 @@ nav {
     .paragraph-txt {
         font-size: 18px;
     }
+
+    /* facts */
 
     .facts-hero {
         padding: 50px 6%;
@@ -221,5 +344,25 @@ nav {
 
     .fact p {
         font-size: 17px;
+    }
+
+    .gallery-hero {
+        padding: 35px 6%;
+        min-height: 450px;
+    }
+
+    .gallery-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-image-container {
+        max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
